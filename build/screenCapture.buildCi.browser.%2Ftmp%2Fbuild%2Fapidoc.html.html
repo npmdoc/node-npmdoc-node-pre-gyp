@@ -1,0 +1,1304 @@
+<html><head></head><body><div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a href="https://github.com/mapbox/node-pre-gyp#readme">node-pre-gyp (v0.6.34)</a>
+</h1>
+<h4>Node.js native addon binary install tool</h4>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.node-pre-gyp">module node-pre-gyp</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-pre-gyp.Run">
+            function <span class="apidocSignatureSpan">node-pre-gyp.</span>Run
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-pre-gyp.find">
+            function <span class="apidocSignatureSpan">node-pre-gyp.</span>find
+            <span class="apidocSignatureSpan">(package_json_path, opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">node-pre-gyp.</span>Run.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">node-pre-gyp.</span>Run.prototype.configDefs</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">node-pre-gyp.</span>Run.prototype.configDefs.arch.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">node-pre-gyp.</span>compile</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">node-pre-gyp.</span>pre_binding</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">node-pre-gyp.</span>s3_setup</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">node-pre-gyp.</span>versioning</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.node-pre-gyp.Run">module node-pre-gyp.Run</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-pre-gyp.Run.Run">
+            function <span class="apidocSignatureSpan">node-pre-gyp.</span>Run
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-pre-gyp.Run.super_">
+            function <span class="apidocSignatureSpan">node-pre-gyp.Run.</span>super_
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.node-pre-gyp.Run.prototype">module node-pre-gyp.Run.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-pre-gyp.Run.prototype.parseArgv">
+            function <span class="apidocSignatureSpan">node-pre-gyp.Run.prototype.</span>parseArgv
+            <span class="apidocSignatureSpan">(argv)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-pre-gyp.Run.prototype.usage">
+            function <span class="apidocSignatureSpan">node-pre-gyp.Run.prototype.</span>usage
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">node-pre-gyp.Run.prototype.</span>aliases</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">node-pre-gyp.Run.prototype.</span>configDefs</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">node-pre-gyp.Run.prototype.</span>package</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">node-pre-gyp.Run.prototype.</span>shorthands</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">node-pre-gyp.Run.prototype.</span>version</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.node-pre-gyp.Run.prototype.configDefs">module node-pre-gyp.Run.prototype.configDefs</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-pre-gyp.Run.prototype.configDefs.arch">
+            function <span class="apidocSignatureSpan">node-pre-gyp.Run.prototype.configDefs.</span>arch
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-pre-gyp.Run.prototype.configDefs.debug">
+            function <span class="apidocSignatureSpan">node-pre-gyp.Run.prototype.configDefs.</span>debug
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-pre-gyp.Run.prototype.configDefs.directory">
+            function <span class="apidocSignatureSpan">node-pre-gyp.Run.prototype.configDefs.</span>directory
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-pre-gyp.Run.prototype.configDefs.help">
+            function <span class="apidocSignatureSpan">node-pre-gyp.Run.prototype.configDefs.</span>help
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-pre-gyp.Run.prototype.configDefs.loglevel">
+            function <span class="apidocSignatureSpan">node-pre-gyp.Run.prototype.configDefs.</span>loglevel
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-pre-gyp.Run.prototype.configDefs.proxy">
+            function <span class="apidocSignatureSpan">node-pre-gyp.Run.prototype.configDefs.</span>proxy
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.node-pre-gyp.Run.prototype.configDefs.arch.prototype">module node-pre-gyp.Run.prototype.configDefs.arch.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-pre-gyp.Run.prototype.configDefs.arch.prototype.entityify">
+            function <span class="apidocSignatureSpan">node-pre-gyp.Run.prototype.configDefs.arch.prototype.</span>entityify
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-pre-gyp.Run.prototype.configDefs.arch.prototype.isAlpha">
+            function <span class="apidocSignatureSpan">node-pre-gyp.Run.prototype.configDefs.arch.prototype.</span>isAlpha
+            <span class="apidocSignatureSpan">( )</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-pre-gyp.Run.prototype.configDefs.arch.prototype.isDigit">
+            function <span class="apidocSignatureSpan">node-pre-gyp.Run.prototype.configDefs.arch.prototype.</span>isDigit
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-pre-gyp.Run.prototype.configDefs.arch.prototype.supplant">
+            function <span class="apidocSignatureSpan">node-pre-gyp.Run.prototype.configDefs.arch.prototype.</span>supplant
+            <span class="apidocSignatureSpan">(e)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.node-pre-gyp.compile">module node-pre-gyp.compile</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-pre-gyp.compile.run_gyp">
+            function <span class="apidocSignatureSpan">node-pre-gyp.compile.</span>run_gyp
+            <span class="apidocSignatureSpan">(args, opts, callback)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.node-pre-gyp.pre_binding">module node-pre-gyp.pre_binding</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-pre-gyp.pre_binding.find">
+            function <span class="apidocSignatureSpan">node-pre-gyp.pre_binding.</span>find
+            <span class="apidocSignatureSpan">(package_json_path, opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-pre-gyp.pre_binding.validate">
+            function <span class="apidocSignatureSpan">node-pre-gyp.pre_binding.</span>validate
+            <span class="apidocSignatureSpan">(package_json)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">node-pre-gyp.pre_binding.</span>usage</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.node-pre-gyp.s3_setup">module node-pre-gyp.s3_setup</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-pre-gyp.s3_setup.detect">
+            function <span class="apidocSignatureSpan">node-pre-gyp.s3_setup.</span>detect
+            <span class="apidocSignatureSpan">(to, config)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.node-pre-gyp.versioning">module node-pre-gyp.versioning</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-pre-gyp.versioning.evaluate">
+            function <span class="apidocSignatureSpan">node-pre-gyp.versioning.</span>evaluate
+            <span class="apidocSignatureSpan">(package_json, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-pre-gyp.versioning.get_electron_abi">
+            function <span class="apidocSignatureSpan">node-pre-gyp.versioning.</span>get_electron_abi
+            <span class="apidocSignatureSpan">(runtime, target_version)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-pre-gyp.versioning.get_node_abi">
+            function <span class="apidocSignatureSpan">node-pre-gyp.versioning.</span>get_node_abi
+            <span class="apidocSignatureSpan">(runtime, versions)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-pre-gyp.versioning.get_node_webkit_abi">
+            function <span class="apidocSignatureSpan">node-pre-gyp.versioning.</span>get_node_webkit_abi
+            <span class="apidocSignatureSpan">(runtime, target_version)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-pre-gyp.versioning.get_process_runtime">
+            function <span class="apidocSignatureSpan">node-pre-gyp.versioning.</span>get_process_runtime
+            <span class="apidocSignatureSpan">(versions)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-pre-gyp.versioning.get_runtime_abi">
+            function <span class="apidocSignatureSpan">node-pre-gyp.versioning.</span>get_runtime_abi
+            <span class="apidocSignatureSpan">(runtime, target_version)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-pre-gyp.versioning.validate_config">
+            function <span class="apidocSignatureSpan">node-pre-gyp.versioning.</span>validate_config
+            <span class="apidocSignatureSpan">(package_json)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.node-pre-gyp" id="apidoc.module.node-pre-gyp">module node-pre-gyp</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.node-pre-gyp.Run" id="apidoc.element.node-pre-gyp.Run">
+        function <span class="apidocSignatureSpan">node-pre-gyp.</span>Run
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Run() {
+  var self = this;
+
+  this.commands = {};
+
+  commands.forEach(function (command) {
+    self.commands[command] = function (argv, callback) {
+      log.verbose('command', command, argv);
+      return require('./' + command)(self, argv, callback);
+    };
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-pre-gyp.find" id="apidoc.element.node-pre-gyp.find">
+        function <span class="apidocSignatureSpan">node-pre-gyp.</span>find
+        <span class="apidocSignatureSpan">(package_json_path, opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">find = function (package_json_path, opts) {
+   if (!existsSync(package_json_path)) {
+        throw new Error("package.json does not exist at " + package_json_path);
+   }
+   var package_json = require(package_json_path);
+   versioning.validate_config(package_json);
+   opts = opts || {};
+   if (!opts.module_root) opts.module_root = path.dirname(package_json_path);
+   var meta = versioning.evaluate(package_json,opts);
+   return meta.module;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+```
+
+Change those lines to:
+
+```js
+var binary = require('node-pre-gyp');
+var path = require('path');
+var binding_path = binary.<span class="apidocCodeKeywordSpan">find</span>(path.resolve(path.join(__dirname,'./package.json&amp;#
+x27;)));
+var binding = require(binding_path);
+```
+
+For a full example see [node-addon-example's index.js](https://github.com/springmeyer/node-addon-example/blob/2ff60a8ded7f042864ad21db00c3a5a06cf47075
+/index.js#L1-L4)
+
+#### 4) Build and package your app
+...</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.node-pre-gyp.Run" id="apidoc.module.node-pre-gyp.Run">module node-pre-gyp.Run</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.node-pre-gyp.Run.Run" id="apidoc.element.node-pre-gyp.Run.Run">
+        function <span class="apidocSignatureSpan">node-pre-gyp.</span>Run
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Run() {
+  var self = this;
+
+  this.commands = {};
+
+  commands.forEach(function (command) {
+    self.commands[command] = function (argv, callback) {
+      log.verbose('command', command, argv);
+      return require('./' + command)(self, argv, callback);
+    };
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-pre-gyp.Run.super_" id="apidoc.element.node-pre-gyp.Run.super_">
+        function <span class="apidocSignatureSpan">node-pre-gyp.Run.</span>super_
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function EventEmitter() {
+  EventEmitter.init.call(this);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.node-pre-gyp.Run.prototype" id="apidoc.module.node-pre-gyp.Run.prototype">module node-pre-gyp.Run.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.node-pre-gyp.Run.prototype.parseArgv" id="apidoc.element.node-pre-gyp.Run.prototype.parseArgv">
+        function <span class="apidocSignatureSpan">node-pre-gyp.Run.prototype.</span>parseArgv
+        <span class="apidocSignatureSpan">(argv)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function parseOpts(argv) {
+  this.opts = nopt(this.configDefs, this.shorthands, argv);
+  this.argv = this.opts.argv.remain.slice();
+  var commands = this.todo = [];
+
+  // create a copy of the argv array with aliases mapped
+  argv = this.argv.map(function (arg) {
+    // is this an alias?
+    if (arg in this.aliases) {
+      arg = this.aliases[arg];
+    }
+    return arg;
+  }, this);
+
+  // process the mapped args into "command" objects ("name" and "args" props)
+  argv.slice().forEach(function (arg) {
+    if (arg in this.commands) {
+      var args = argv.splice(0, argv.indexOf(arg));
+      argv.shift();
+      if (commands.length &gt; 0) {
+        commands[commands.length - 1].args = args;
+      }
+      commands.push({ name: arg, args: [] });
+    }
+  }, this);
+  if (commands.length &gt; 0) {
+    commands[commands.length - 1].args = argv.splice(0);
+  }
+
+  // support for inheriting config env variables from npm
+  var npm_config_prefix = 'npm_config_';
+  Object.keys(process.env).forEach(function (name) {
+    if (name.indexOf(npm_config_prefix) !== 0) return;
+    var val = process.env[name];
+    if (name === npm_config_prefix + 'loglevel') {
+      log.level = val;
+    } else {
+      // add the user-defined options to the config
+      name = name.substring(npm_config_prefix.length);
+      // avoid npm argv clobber already present args
+      // which avoids problem of 'npm test' calling
+      // script that runs unique npm install commands
+      if (name === 'argv') {
+         if (this.opts.argv &amp;&amp;
+             this.opts.argv.remain &amp;&amp;
+             this.opts.argv.remain.length) {
+            // do nothing
+         } else {
+            this.opts[name] = val;
+         }
+      } else {
+        this.opts[name] = val;
+      }
+    }
+  }, this);
+
+  if (this.opts.loglevel) {
+    log.level = this.opts.loglevel;
+  }
+  log.resume();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-pre-gyp.Run.prototype.usage" id="apidoc.element.node-pre-gyp.Run.prototype.usage">
+        function <span class="apidocSignatureSpan">node-pre-gyp.Run.prototype.</span>usage
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function usage() {
+  var str = [
+      '',
+      '  Usage: node-pre-gyp &lt;command&gt; [options]',
+      '',
+      '  where &lt;command&gt; is one of:',
+      commands.map(function (c) {
+        return '    - ' + c + ' - ' + require('./' + c).usage;
+      }).join('\n'),
+      '',
+      'node-pre-gyp@' + this.version + '  ' + path.resolve(__dirname, '..'),
+      'node@' + process.versions.node
+  ].join('\n');
+  return str;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.node-pre-gyp.Run.prototype.configDefs" id="apidoc.module.node-pre-gyp.Run.prototype.configDefs">module node-pre-gyp.Run.prototype.configDefs</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.node-pre-gyp.Run.prototype.configDefs.arch" id="apidoc.element.node-pre-gyp.Run.prototype.configDefs.arch">
+        function <span class="apidocSignatureSpan">node-pre-gyp.Run.prototype.configDefs.</span>arch
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function String() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-pre-gyp.Run.prototype.configDefs.debug" id="apidoc.element.node-pre-gyp.Run.prototype.configDefs.debug">
+        function <span class="apidocSignatureSpan">node-pre-gyp.Run.prototype.configDefs.</span>debug
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Boolean() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-pre-gyp.Run.prototype.configDefs.directory" id="apidoc.element.node-pre-gyp.Run.prototype.configDefs.directory">
+        function <span class="apidocSignatureSpan">node-pre-gyp.Run.prototype.configDefs.</span>directory
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function String() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-pre-gyp.Run.prototype.configDefs.help" id="apidoc.element.node-pre-gyp.Run.prototype.configDefs.help">
+        function <span class="apidocSignatureSpan">node-pre-gyp.Run.prototype.configDefs.</span>help
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Boolean() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-pre-gyp.Run.prototype.configDefs.loglevel" id="apidoc.element.node-pre-gyp.Run.prototype.configDefs.loglevel">
+        function <span class="apidocSignatureSpan">node-pre-gyp.Run.prototype.configDefs.</span>loglevel
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function String() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-pre-gyp.Run.prototype.configDefs.proxy" id="apidoc.element.node-pre-gyp.Run.prototype.configDefs.proxy">
+        function <span class="apidocSignatureSpan">node-pre-gyp.Run.prototype.configDefs.</span>proxy
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function String() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.node-pre-gyp.Run.prototype.configDefs.arch.prototype" id="apidoc.module.node-pre-gyp.Run.prototype.configDefs.arch.prototype">module node-pre-gyp.Run.prototype.configDefs.arch.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.node-pre-gyp.Run.prototype.configDefs.arch.prototype.entityify" id="apidoc.element.node-pre-gyp.Run.prototype.configDefs.arch.prototype.entityify">
+        function <span class="apidocSignatureSpan">node-pre-gyp.Run.prototype.configDefs.arch.prototype.</span>entityify
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">entityify = function (){return this.replace(/&amp;/g,"&amp;amp;").replace(/&lt;/g,"&amp;lt;").replace(/&gt;/g,"&amp;gt;"
+)}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-pre-gyp.Run.prototype.configDefs.arch.prototype.isAlpha" id="apidoc.element.node-pre-gyp.Run.prototype.configDefs.arch.prototype.isAlpha">
+        function <span class="apidocSignatureSpan">node-pre-gyp.Run.prototype.configDefs.arch.prototype.</span>isAlpha
+        <span class="apidocSignatureSpan">( )</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isAlpha = function ( ){return this&gt;="a"&amp;&amp;this&lt;="z\uffff"||this&gt;="A"&amp;&amp;this&lt;="Z\uffff"}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-pre-gyp.Run.prototype.configDefs.arch.prototype.isDigit" id="apidoc.element.node-pre-gyp.Run.prototype.configDefs.arch.prototype.isDigit">
+        function <span class="apidocSignatureSpan">node-pre-gyp.Run.prototype.configDefs.arch.prototype.</span>isDigit
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isDigit = function (){return this&gt;="0"&amp;&amp;
+this&lt;="9"}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-pre-gyp.Run.prototype.configDefs.arch.prototype.supplant" id="apidoc.element.node-pre-gyp.Run.prototype.configDefs.arch.prototype.supplant">
+        function <span class="apidocSignatureSpan">node-pre-gyp.Run.prototype.configDefs.arch.prototype.</span>supplant
+        <span class="apidocSignatureSpan">(e)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">supplant = function (e){return this.replace(/\{([^{}]*)\}/g,function(t,n){var r=e[n];return typeof
+r=="string"||typeof r=="number"?r:t})}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.node-pre-gyp.compile" id="apidoc.module.node-pre-gyp.compile">module node-pre-gyp.compile</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.node-pre-gyp.compile.run_gyp" id="apidoc.element.node-pre-gyp.compile.run_gyp">
+        function <span class="apidocSignatureSpan">node-pre-gyp.compile.</span>run_gyp
+        <span class="apidocSignatureSpan">(args, opts, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">run_gyp = function (args, opts, callback) {
+    var shell_cmd = '';
+    var cmd_args = [];
+    if (opts.runtime &amp;&amp; opts.runtime == 'node-webkit') {
+        shell_cmd = 'nw-gyp';
+        if (win) shell_cmd += '.cmd';
+    } else {
+        var node_gyp_path = which_node_gyp();
+        if (node_gyp_path) {
+            shell_cmd = process.execPath;
+            cmd_args.push(node_gyp_path);
+        } else {
+            shell_cmd = 'node-gyp';
+            if (win) shell_cmd += '.cmd';
+        }
+    }
+    var final_args = cmd_args.concat(args);
+    var cmd = cp.spawn(shell_cmd, final_args, {cwd: undefined, env: process.env, stdio: [ 0, 1, 2]});
+    cmd.on('error', function (err) {
+        if (err) {
+            return callback(new Error("Failed to execute '" + shell_cmd + ' ' + final_args.join(' ') + "' (" + err + ")"));
+        }
+        callback(null,opts);
+    });
+    cmd.on('close', function (code) {
+        if (code &amp;&amp; code !== 0) {
+            return callback(new Error("Failed to execute '" + shell_cmd + ' ' + final_args.join(' ') + "' (" + code + ")"));
+        }
+        callback(null,opts);
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    }
+});
+// --ensure=false tell node-gyp to re-install node development headers
+// but it is only respected by node-gyp install, so we have to call install
+// as a separate step if the user passes it
+if (gyp.opts.ensure === false) {
+    var install_args = final_args.concat(['install','--ensure=false']);
+    compile.<span class="apidocCodeKeywordSpan">run_gyp</span>(install_args,result.opts,function(err) {
+        if (err) return callback(err);
+        if (result.unparsed.length &gt; 0) {
+            final_args = final_args.
+                          concat(['--']).
+                          concat(result.unparsed);
+        }
+        compile.run_gyp(['configure'].concat(final_args),result.opts,function(err) {
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.node-pre-gyp.pre_binding" id="apidoc.module.node-pre-gyp.pre_binding">module node-pre-gyp.pre_binding</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.node-pre-gyp.pre_binding.find" id="apidoc.element.node-pre-gyp.pre_binding.find">
+        function <span class="apidocSignatureSpan">node-pre-gyp.pre_binding.</span>find
+        <span class="apidocSignatureSpan">(package_json_path, opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">find = function (package_json_path, opts) {
+   if (!existsSync(package_json_path)) {
+        throw new Error("package.json does not exist at " + package_json_path);
+   }
+   var package_json = require(package_json_path);
+   versioning.validate_config(package_json);
+   opts = opts || {};
+   if (!opts.module_root) opts.module_root = path.dirname(package_json_path);
+   var meta = versioning.evaluate(package_json,opts);
+   return meta.module;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+```
+
+Change those lines to:
+
+```js
+var binary = require('node-pre-gyp');
+var path = require('path');
+var binding_path = binary.<span class="apidocCodeKeywordSpan">find</span>(path.resolve(path.join(__dirname,'./package.json&amp;#
+x27;)));
+var binding = require(binding_path);
+```
+
+For a full example see [node-addon-example's index.js](https://github.com/springmeyer/node-addon-example/blob/2ff60a8ded7f042864ad21db00c3a5a06cf47075
+/index.js#L1-L4)
+
+#### 4) Build and package your app
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-pre-gyp.pre_binding.validate" id="apidoc.element.node-pre-gyp.pre_binding.validate">
+        function <span class="apidocSignatureSpan">node-pre-gyp.pre_binding.</span>validate
+        <span class="apidocSignatureSpan">(package_json)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">validate = function (package_json) {
+    versioning.validate_config(package_json);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.node-pre-gyp.s3_setup" id="apidoc.module.node-pre-gyp.s3_setup">module node-pre-gyp.s3_setup</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.node-pre-gyp.s3_setup.detect" id="apidoc.element.node-pre-gyp.s3_setup.detect">
+        function <span class="apidocSignatureSpan">node-pre-gyp.s3_setup.</span>detect
+        <span class="apidocSignatureSpan">(to, config)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">detect = function (to, config) {
+    var uri = url.parse(to);
+    var hostname_matches = uri.hostname.match(URI_REGEX);
+    config.prefix = (!uri.pathname || uri.pathname == '/') ? '' : uri.pathname.replace('/','');
+    if(!hostname_matches) {
+        return;
+    }
+    if (!config.bucket) {
+        config.bucket = hostname_matches[1];
+    }
+    if (!config.region) {
+        var s3_domain = hostname_matches[2];
+        if (s3_domain.slice(0,3) == 's3-' &amp;&amp;
+            s3_domain.length &gt;= 3) {
+            // it appears the region is explicit in the url
+            config.region = s3_domain.replace('s3-','');
+        }
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+var s3_setup = require('./util/s3_setup.js');
+var config = require('rc')("node_pre_gyp",{acl:"public-read"});
+
+function unpublish(gyp, argv, callback) {
+var AWS = require("aws-sdk");
+var package_json = JSON.parse(fs.readFileSync('./package.json'));
+var opts = versioning.evaluate(package_json, gyp.opts);
+s3_setup.<span class="apidocCodeKeywordSpan">detect</span>(opts.hosted_path,config);
+AWS.config.update(config);
+var s3 =  new AWS.S3();
+var s3_opts = {  Bucket: config.bucket,
+                 Prefix: config.prefix
+              };
+s3.listObjects(s3_opts, function(err, meta){
+    if (err &amp;&amp; err.code == 'NotFound') {
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.node-pre-gyp.versioning" id="apidoc.module.node-pre-gyp.versioning">module node-pre-gyp.versioning</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.node-pre-gyp.versioning.evaluate" id="apidoc.element.node-pre-gyp.versioning.evaluate">
+        function <span class="apidocSignatureSpan">node-pre-gyp.versioning.</span>evaluate
+        <span class="apidocSignatureSpan">(package_json, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">evaluate = function (package_json, options) {
+    options = options || {};
+    validate_config(package_json);
+    var v = package_json.version;
+    var module_version = semver.parse(v);
+    var runtime = options.runtime || get_process_runtime(process.versions);
+    var opts = {
+        name: package_json.name,
+        configuration: Boolean(options.debug) ? 'Debug' : 'Release',
+        debug: options.debug,
+        module_name: package_json.binary.module_name,
+        version: module_version.version,
+        prerelease: module_version.prerelease.length ? module_version.prerelease.join('.') : '',
+        build: module_version.build.length ? module_version.build.join('.') : '',
+        major: module_version.major,
+        minor: module_version.minor,
+        patch: module_version.patch,
+        runtime: runtime,
+        node_abi: get_runtime_abi(runtime,options.target),
+        target: options.target || '',
+        platform: options.target_platform || process.platform,
+        target_platform: options.target_platform || process.platform,
+        arch: options.target_arch || process.arch,
+        target_arch: options.target_arch || process.arch,
+        module_main: package_json.main,
+        toolset : options.toolset || '' // address https://github.com/mapbox/node-pre-gyp/issues/119
+    };
+    // support host mirror with npm config `--{module_name}_binary_host_mirror`
+    // e.g.: https://github.com/node-inspector/v8-profiler/blob/master/package.json#L25
+    // &gt; npm install v8-profiler --profiler_binary_host_mirror=https://npm.taobao.org/mirrors/node-inspector/
+    var host = process.env['npm_config_' + opts.module_name + '_binary_host_mirror'] || package_json.binary.host;
+    opts.host = fix_slashes(eval_template(host,opts));
+    opts.module_path = eval_template(package_json.binary.module_path,opts);
+    // now we resolve the module_path to ensure it is absolute so that binding.gyp variables work predictably
+    if (options.module_root) {
+        // resolve relative to known module root: works for pre-binding require
+        opts.module_path = path.join(options.module_root,opts.module_path);
+    } else {
+        // resolve relative to current working directory: works for node-pre-gyp commands
+        opts.module_path = path.resolve(opts.module_path);
+    }
+    opts.module = path.join(opts.module_path,opts.module_name + '.node');
+    opts.remote_path = package_json.binary.remote_path ? drop_double_slashes(fix_slashes(eval_template(package_json.binary.remote_path
+,opts))) : default_remote_path;
+    var package_name = package_json.binary.package_name ? package_json.binary.package_name : default_package_name;
+    opts.package_name = eval_template(package_name,opts);
+    opts.staged_tarball = path.join('build/stage',opts.remote_path,opts.package_name);
+    opts.hosted_path = url.resolve(opts.host,opts.remote_path);
+    opts.hosted_tarball = url.resolve(opts.hosted_path,opts.package_name);
+    return opts;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+var fs = require('fs');
+var rm = require('rimraf');
+var exists = require('fs').exists || require('path').exists;
+var versioning = require('./util/versioning.js');
+
+function clean (gyp, argv, callback) {
+var package_json = JSON.parse(fs.readFileSync('./package.json'));
+var opts = versioning.<span class="apidocCodeKeywordSpan">evaluate</span>(package_json, gyp.opts);
+var to_delete = opts.module_path;
+exists(to_delete, function(found) {
+    if (found) {
+        if (!gyp.opts.silent_clean) console.log('['+package_json.name+'] Removing "%s"', to_delete
+);
+        return rm(to_delete, callback);
+    }
+    return callback();
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-pre-gyp.versioning.get_electron_abi" id="apidoc.element.node-pre-gyp.versioning.get_electron_abi">
+        function <span class="apidocSignatureSpan">node-pre-gyp.versioning.</span>get_electron_abi
+        <span class="apidocSignatureSpan">(runtime, target_version)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function get_electron_abi(runtime, target_version) {
+    if (!runtime) {
+        throw new Error("get_electron_abi requires valid runtime arg");
+    }
+    if (typeof target_version === 'undefined') {
+        // erroneous CLI call
+        throw new Error("Empty target version is not supported if electron is the target.");
+    }
+    // Electron guarantees that patch version update won't break native modules.
+    var sem_ver = semver.parse(target_version);
+    return runtime + '-v' + sem_ver.major + '.' + sem_ver.minor;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-pre-gyp.versioning.get_node_abi" id="apidoc.element.node-pre-gyp.versioning.get_node_abi">
+        function <span class="apidocSignatureSpan">node-pre-gyp.versioning.</span>get_node_abi
+        <span class="apidocSignatureSpan">(runtime, versions)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function get_node_abi(runtime, versions) {
+    if (!runtime) {
+        throw new Error("get_node_abi requires valid runtime arg");
+    }
+    if (!versions) {
+        throw new Error("get_node_abi requires valid process.versions object");
+    }
+    var sem_ver = semver.parse(versions.node);
+    if (sem_ver.major === 0 &amp;&amp; sem_ver.minor % 2) { // odd series
+        // https://github.com/mapbox/node-pre-gyp/issues/124
+        return runtime+'-v'+versions.node;
+    } else {
+        // process.versions.modules added in &gt;= v0.10.4 and v0.11.7
+        // https://github.com/joyent/node/commit/ccabd4a6fa8a6eb79d29bc3bbe9fe2b6531c2d8e
+        return versions.modules ? runtime+'-v' + (+versions.modules) :
+            'v8-' + versions.v8.split('.').slice(0,2).join('.');
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-pre-gyp.versioning.get_node_webkit_abi" id="apidoc.element.node-pre-gyp.versioning.get_node_webkit_abi">
+        function <span class="apidocSignatureSpan">node-pre-gyp.versioning.</span>get_node_webkit_abi
+        <span class="apidocSignatureSpan">(runtime, target_version)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function get_node_webkit_abi(runtime, target_version) {
+    if (!runtime) {
+        throw new Error("get_node_webkit_abi requires valid runtime arg");
+    }
+    if (typeof target_version === 'undefined') {
+        // erroneous CLI call
+        throw new Error("Empty target version is not supported if node-webkit is the target.");
+    }
+    return runtime + '-v' + target_version;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-pre-gyp.versioning.get_process_runtime" id="apidoc.element.node-pre-gyp.versioning.get_process_runtime">
+        function <span class="apidocSignatureSpan">node-pre-gyp.versioning.</span>get_process_runtime
+        <span class="apidocSignatureSpan">(versions)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function get_process_runtime(versions) {
+    var runtime = 'node';
+    if (versions['node-webkit']) {
+        runtime = 'node-webkit';
+    } else if (versions.electron) {
+        runtime = 'electron';
+    }
+    return runtime;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-pre-gyp.versioning.get_runtime_abi" id="apidoc.element.node-pre-gyp.versioning.get_runtime_abi">
+        function <span class="apidocSignatureSpan">node-pre-gyp.versioning.</span>get_runtime_abi
+        <span class="apidocSignatureSpan">(runtime, target_version)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function get_runtime_abi(runtime, target_version) {
+    if (!runtime) {
+        throw new Error("get_runtime_abi requires valid runtime arg");
+    }
+    if (runtime === 'node-webkit') {
+        return get_node_webkit_abi(runtime, target_version || process.versions['node-webkit']);
+    } else if (runtime === 'electron') {
+        return get_electron_abi(runtime, target_version || process.versions.electron);
+    } else {
+        if (runtime != 'node') {
+            throw new Error("Unknown Runtime: '" + runtime + "'");
+        }
+        if (!target_version) {
+            return get_node_abi(runtime,process.versions);
+        } else {
+            var cross_obj;
+            // abi_crosswalk generated with ./scripts/abi_crosswalk.js
+            if (abi_crosswalk[target_version]) {
+                cross_obj = abi_crosswalk[target_version];
+            } else {
+                var target_parts = target_version.split('.').map(function(i) { return +i; });
+                if (target_parts.length != 3) { // parse failed
+                    throw new Error("Unknown target version: " + target_version);
+                }
+<span class="apidocCodeCommentSpan">                /*
+                    The below code tries to infer the last known ABI compatible version
+                    that we have recorded in the abi_crosswalk.json when an exact match
+                    is not possible. The reasons for this to exist are complicated:
+
+                       - We support passing --target to be able to allow developers to package binaries for versions of node
+                         that are not the same one as they are running. This might also be used in combination with the
+                         --target_arch or --target_platform flags to also package binaries for alternative platforms
+                       - When --target is passed we can't therefore determine the ABI (process.versions.modules) from the node
+                         version that is running in memory
+                       - So, therefore node-pre-gyp keeps an "ABI crosswalk" (lib/util/abi_crosswalk.json) to be able to look
+                         this info up for all versions
+                       - But we cannot easily predict what the future ABI will be for released versions
+                       - And node-pre-gyp needs to be a `bundledDependency` in apps that depend on it in order to work correctly
+                         by being fully available at install time.
+                       - So, the speed of node releases and the bundled nature of node-pre-gyp mean that a new node-pre-gyp release
+                         need to happen for every node.js/io.js/node-webkit/nw.js/atom-shell/etc release that might come online
+if
+                         you want the `--target` flag to keep working for the latest version
+                       - Which is impractical ^^
+                       - Hence the below code guesses about future ABI to make the need to update node-pre-gyp less demanding.
+
+                    In practice then you can have a dependency of your app like `node-sqlite3` that bundles a `node-pre-gyp` that
+                    only knows about node v0.10.33 in the `abi_crosswalk.json` but target node v0.10.34 (which is assumed to be
+                    ABI compatible with v0.10.33).
+
+                    TODO: use semver module instead of custom version parsing
+                */
+</span>                var major = target_parts[0];
+                var minor = target_parts[1];
+                var patch = target_parts[2];
+                // io.js: yeah if node.js ever releases 1.x this will break
+                // but that is unlikely to happen: https://github.com/iojs/io.js/pull/253#issuecomment-69432616
+                if (major === 1) {
+                    // look for last release that is the same major version
+                    // e.g. we assume io.js 1.x is ABI compatible with &gt;= 1.0.0
+                    while (true) {
+                        if (minor &gt; 0) --minor;
+                        if (patch &gt; 0) --patch;
+                        var new_iojs_target = '' + major + '.' + minor + '.' ...</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-pre-gyp.versioning.validate_config" id="apidoc.element.node-pre-gyp.versioning.validate_config">
+        function <span class="apidocSignatureSpan">node-pre-gyp.versioning.</span>validate_config
+        <span class="apidocSignatureSpan">(package_json)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function validate_config(package_json) {
+    var msg = package_json.name + ' package.json is not node-pre-gyp ready:\n';
+    var missing = [];
+    if (!package_json.main) {
+        missing.push('main');
+    }
+    if (!package_json.version) {
+        missing.push('version');
+    }
+    if (!package_json.name) {
+        missing.push('name');
+    }
+    if (!package_json.binary) {
+        missing.push('binary');
+    }
+    var o = package_json.binary;
+    required_parameters.forEach(function(p) {
+        if (missing.indexOf('binary') &gt; -1) {
+            missing.pop('binary');
+        }
+        if (!o || o[p] === undefined) {
+            missing.push('binary.' + p);
+        }
+    });
+    if (missing.length &gt;= 1) {
+        throw new Error(msg+"package.json must declare these properties: \n" + missing.join('\n'));
+    }
+    if (o) {
+        // enforce https over http
+        var protocol = url.parse(o.host).protocol;
+        if (protocol === 'http:') {
+            throw new Error("'host' protocol ("+protocol+") is invalid - only 'https:' is accepted");
+        }
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+var path = require('path');
+
+module.exports = exports;
+
+exports.usage = 'Finds the require path for the node-pre-gyp installed module';
+
+exports.validate = function(package_json) {
+ versioning.<span class="apidocCodeKeywordSpan">validate_config</span>(package_json);
+};
+
+exports.find = function(package_json_path,opts) {
+if (!existsSync(package_json_path)) {
+     throw new Error("package.json does not exist at " + package_json_path);
+}
+var package_json = require(package_json_path);
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
+</body></html>
